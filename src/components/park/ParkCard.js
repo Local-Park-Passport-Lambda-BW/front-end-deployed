@@ -78,8 +78,7 @@ const ParkCard = props => {
 
   useEffect(() => {
     axios
-      .get("http://park-pp.herokuapp.com/parks")
-      // http://localhost:3300/parks
+      .get("https://park-pp.herokuapp.com/parks")
       .then(res => {
         setParkList(res.data);
       })

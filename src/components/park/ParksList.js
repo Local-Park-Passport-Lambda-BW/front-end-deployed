@@ -14,7 +14,7 @@ const ParkListCon = styled.div`
 const ParksList = ({ parkList, setParkList, history }) => {
   useEffect(() => {
     axios
-      .get("http://park-pp.herokuapp.com/parks")
+      .get("https://park-pp.herokuapp.com/parks")
       // http://localhost:3300/parks
       .then(res => setParkList(res.data))
       .catch(error => console.log(error.message));

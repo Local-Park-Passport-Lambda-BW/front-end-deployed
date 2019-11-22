@@ -46,9 +46,12 @@ const LandingPage = () => {
   const [allParks, setAllParks] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:3300/parks")
-      .then(res => setAllParks(res.data))
-      .catch(err => err.message)
+    axios
+      .get("https://park-pp.herokuapp.com/parks")
+      .then(res => {
+        setAllParks(res.data);
+      })
+      .catch(error => console.log(error.message))
   }, [])
 
   const handleChange = evt => {
